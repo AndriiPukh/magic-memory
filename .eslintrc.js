@@ -16,7 +16,12 @@ module.exports = {
     semi: 0,
     'comma-dangle': 0,
     'prettier/prettier': 'error',
-    'react/jsx-filename-extension': [1, { extensions: ['.js', '.jsx'] }],
+    'react/jsx-filename-extension': [
+      1,
+      {
+        extensions: ['.js', '.jsx'],
+      },
+    ],
     'react/prop-types': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': [
       'off',
@@ -39,5 +44,19 @@ module.exports = {
     ],
     'implicit-arrow-linebreak': 'off',
     'function-paren-newline': 'off',
+    'object-curly-newline': [
+      'error',
+      {
+        ObjectExpression: 'always',
+        ObjectPattern: {
+          multiline: true,
+        },
+        ImportDeclaration: 'never',
+        ExportDeclaration: {
+          multiline: true,
+          minProperties: 3,
+        },
+      },
+    ],
   },
 }
